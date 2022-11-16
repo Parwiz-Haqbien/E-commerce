@@ -15,13 +15,13 @@ Product.hasMany(Product, {
 });
 
 // Products belongToMany Tags (through ProductTag)
-Product.belongToMany(Tag, {
+Product.belongsToMany(Tag, {
   through: ProductTag,
   foreinKey: 'product_id',
 });
 
 // Tags belongToMany Products (through ProductTag)
-Product.belongToMany(Tag, {
+Product.belongsToMany(Tag, {
   through: ProductTag,
   foreinKey: 'tag_id',
 });
