@@ -62,30 +62,7 @@ router.get('/:id', (req, res) => {
 
 // create new product
 router.post('/', (req, res) => {
-  Product.create({
-    product_name: req.body.product_name,
-    price: req.body.price,
-    stock: req.body.stock,
-    category_id: req.body.category_id,
-    tagIds: req.body.tagIds
-  })
-  ,then((product) => {
-    if(req.body.tagIds.length) {
-      const productTagIdsArr = req.body.tagIds.map((tag_id) => {
-        return {
-          product_id: product.id,
-          tag_id
-        };
-      });
-      return ProductTag.bulkCreate(productTagIdsArr);
-    }
-    res.status(200).json(product);
-  })
-  .then(productDataId => res.json(productDataId))
-  .catch(err => {
-    console.log(err);
-    res.status(400).json(err);
-  });
+
 
   Product.create(req.body)
     .then((product) => {
