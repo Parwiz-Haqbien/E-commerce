@@ -11,11 +11,11 @@ router.get('/', (req, res) => {
     attributes: ['id', 'product_name', 'price', 'stock'],
     include: [
       {
-        modol: Category,
-        attributes: ['catogory_name']
+        model: Category,
+        attributes: ['category_name']
       },
       {
-        modol: Tag,
+        model: Tag,
         attributes: ['tag_name']
       }
     ]
@@ -38,11 +38,11 @@ router.get('/:id', (req, res) => {
     attributes: ['id', 'product_name', 'price', 'stock'],
     include: [
       {
-        modol: Category,
-        attributes: ['catogory_name']
+        model: Category,
+        attributes: ['category_name']
       },
       {
-        modol: Tag,
+        model: Tag,
         attributes: ['tag_name']
       }
     ]
