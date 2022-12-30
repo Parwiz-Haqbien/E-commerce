@@ -13,7 +13,7 @@ I have used this repository to create an application to manage an  E-commerce da
 N/A
 
 ## Usage
-To use the Team Profile generator, run node.js to start up the backend application.
+To use the E-commerce, run node.js to start up the backend application.
 
 ## Contribution
 Made by Parwiz Haqbien
